@@ -1,0 +1,25 @@
+\documentclass[a4paper, 10pt]{article}
+\title{Introducción a la Programación Lineal}
+\author{Ana López}
+\begin{document}
+    \maketitle
+    \part{Ejercicio 1: Establecer las ecuaciones}
+    De los guerreros, los más valiosos son los jinetes, luego los arqueros y luego los espadachines. 
+    Cada jinete gasta 140/1200 de comida, 0/800 de madera, 100/600 de oro (+230 poder)
+    Cada arquero gasta 80/1200 de comida, 10/800 de madera, 40/600 de oro (+95 poder)
+    Cada Espadachín gasta 60/1200 de comida, 20/800 de madera, 0/600 de oro (+70 poder)
+
+    Las variables van a ser el n\'umero de jinetes, arqueros y espadachines. (Las variables son n\'umeros naturales). Para establecer las restricciones, hacemos una ecuaci\'on por recurso indicando su gasto en funci\'on del n\'umero de guerreros (No se pueden repartir m\'as recursos de los que hay, por lo que los recursos utilizados son igual o menor que el total):
+
+    Comida: 140*Jinete + 80*Arquero + 60*Espadach\'in <= 1200 
+    Madera: 10*Arquero + 20*Espadach\'in <= 800
+    Oro: 100*Jinete + 40*Arquero <= 600
+    Estas ecuaciones significan que cada guerrero (jinete, arquero, espadach\'in) gasta un n\'umero de recursos cada uno.
+
+    \part{Ejercicio 2: Utilizar la progrmaci\'on lineal}
+    Para maximizar el poder del ej\'ercito, hacemos una funci\'on lineal e indicamos al programa que tiene que tener el valor m\'aximo (C\'odigo en el archivo .py):
+    m\'ax 230*Jinete + 95*Arquero + 70*Espadach\'in
+
+    \part{Ejercicio 3: Conclusiones}
+    El algoritmo de progrmaci\'on lineal sirve para optimizar un valor en funci\'on de unas restricciones. Aunque hay otras opciones para maximizar o minimizar funciones, como el ensayo y error o el algoritmo gen\'etico, es más f\'acil usar este \'etodo, ya que crear ecuaciones lineales y resolverlas es m\'as sencillo y pr\'actico que probar aleatoriamente posibles soluciones (como el primer ejemplo) o que probar todas y cada una de las posibles opciones (algoritmo gen\'etico).
+\end{document}
